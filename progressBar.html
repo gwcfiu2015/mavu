@@ -1,0 +1,112 @@
+<html>
+<head>
+
+<title> Mangoes Login Form </title>
+<meta charset="utf-8">
+
+<script type= "text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script type= "text/javascript">
+    
+//function displayText()
+//{
+//    var inputStr = document.getElementById("userTxtInput").value;
+//    alert("user input: "+inputStr); 
+//    document.getElementById("userTxtDisplay").innerHTML= inputStr; 
+//
+//}
+        
+</script> 
+
+<style>
+    progress{
+    min-width: 400px;
+    height: 25px;
+    margin: 8px;
+    display: block;
+    }
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #ddd;
+    padding: 8px 16px;
+    margin: 8px;
+    
+}
+    
+.button:hover {
+    box-shadow: inset 0 0 10px rgba(0,0,0, 0.1);
+    
+    
+}
+    
+ </style>
+    
+
+
+    
+    
+    
+    
+<script type= "text/javascript">
+
+    function goClicked() {
+//        alert("goclicked"); 
+    animateProgress(25);
+    
+}
+//    function backClicked() {
+//        alert("back clicked");
+//    animateProgress(-25);
+//
+
+ function animateProgress(diff) {
+     var currValue = $("progress").val();
+     var toValue = currValue + diff; 
+     
+     toValue = toValue < 0 ? 0 : toValue;
+     toValue = toValue > 100 ? 100: toValue;
+     
+     $("#progress").animate({'value': toValue}, 500); 
+ }
+    
+    
+    
+    
+    
+</script> 
+    
+</head>
+<body> 
+<h2>  Mangoes Login </h2>
+    <progress id= "progress" value='0' max= '100'></progress>
+<!--    <label> back </label>-->
+    
+<!--<input type= "button" class= "button2" value= "Back Button" data-diff="-25" onclick= "backClicked()"/>-->
+
+<!--    <label> cont</label>-->
+<input type="button" value= "increase bar" onclick= "goClicked()" class = "button" data-diff= '25'/>
+
+    
+
+    
+
+    
+
+       
+    
+    
+    
+    
+    
+</body>
+    
+    
+    
+    
+    
+    
+    
+    
+</html>

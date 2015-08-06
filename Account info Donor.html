@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Food Waste</title>
+    <link rel="icon" 
+     type="image/png" 
+     href="./css/mangoIcon.jpg">
+    <link href = "css/styleMyahsAboutUs.css" rel = "stylesheet" style = "text/css"/>
+    <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic|Titillium+Web' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+    
+    
+    <script type="text/javascript" src="Script%20for%20All.js"></script>
+
+   <div id="container" >
+    <div id= "wrapper" >
+   
+    <ul id="list">
+        
+
+
+        
+        
+        <li><button type= "button"class="login1" id = "login" onclick="window.location.href='./testLoginFormWithParse 2.html'"> Sign Out </button></li>
+    
+<li><button type= "button"class="login1" id = "login" onclick="window.location.href='./Donor User.html'"> Back to Dashboard </button></li>
+        
+
+     
+        
+ 
+        
+        
+        
+    </ul>
+    
+    
+    <script>
+    
+  
+
+Parse.initialize("1AA9MEPQBbQOl5r3zQprN06KY2QUs32Y2n418Sv4", "uvPr6EALlpWKQ0Tij361i4et8AnQi7UqdjZbgRij");
+
+var DonorInformation = Parse.Object.extend("DonorInformation");
+
+
+function addToDatabaseDonor() {
+    //alert("ldskfjlsjf");
+
+    var donorInformation1 = new DonorInformation();
+
+//    //set attributes using infomation from the form 
+//    //          charityInformation1.set("Charity", document.getElementById("charity").value);
+//    //          charityInformation1.set("Name", document.getElementById("name").value);
+//    //          charityInformation1.set("Number", document.getElementById("number").value);
+//    //          charityInformation1.set("Address", document.getElementById("address").value);
+//    //          charityInformation1.set("BriefDescription",                            
+//    //          document.getElementById("briefDescription").value);
+//
+//
+    
+    //save it to the database
+//alert("about to save");
+donorInformation1.save({
+        Company: document.getElementById("company").value,
+        Name: document.getElementById("name").value,
+        Number: document.getElementById("number").value,
+        Address: document.getElementById("address").value,
+      }, {
+            success: function (donorInformation1) {
+            //alert("success");
+            console.log(donorInformation1.id);
+            showDonorInformation(donorInformation1.id);
+        }, 
+            error: function (donorInformation1, error) {
+            alert("error");
+            //error message 
+        }
+////    alert("almost there");
+   });
+
+
+    //            charityInformation1.save();
+    //                        console.log("STOP");
+    //
+    //            var id = charityInformation1.id;
+    //            console.log(id);
+    //            console.log("STOP");
+//    alert("almost there");
+    event.preventDefault();
+//    showCharityInformation(charityInformation1.id);
+    //window.open("Choose a Charity.html", "_self");
+}
+
+
+function showDonorInformation(id) {
+
+    //alert("Different");
+    window.open("Send Thanks to Donor (3) .html", "_self");
+}
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</head>
+    <body class = b>
+    <div class= white-pink>      
+        
+    <h1> Account </h1>
+ <form class="charityInfo" class = "white-pink h1>span" class= "white-pink label" class = "white-pink label>span" class= "white-pink input" class="white-pink input" class="white-pink textarea" class="" class="white-pink select">
+<p> Company:  </p>
+<input id= "company" class="donorInfo" type="text" name="donorname">
+<br>
+<br>
+<p> or </p><br>
+<br>
+<br>
+<p>Name:</p>
+<input id="name" class="donorInfo" type="text" name="name">
+<br>
+<br>
+<p> Number: </p>  
+<input id="number" class="donorInfo" type="text" name="number">
+<br>
+<br>
+<p>Address</p>
+<input id="address" class="donorInfo" type="text" name="address" >
+<br>
+  
+    
+<input  type ="submit" class="white-pink .button" value="Save" onclick="addToDatabase()">
+ </div>  
+       
+ 
+     
+     
+ 
+     
+     
+</form>    
+        
+        </div>
+    
+    <div id ="donorList"> </div>
+</body>
+</html>

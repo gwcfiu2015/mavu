@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Mavu Donor Page </title>
+    <link rel="icon" 
+     type="image/png" 
+     href="./css/mangoIcon.jpg">
+    <link href = "css/styleMyahsAboutUs.css" rel = "stylesheet" style = "text/css"/>
+    <link href='http://fonts.googleapis.com/css?                                           family=Noto+Serif:400,400italic|Titillium+Web' rel='stylesheet' type='text/css'>
+    <script type= "text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <link href= "Donate%20Now%20Page.html">
+
+    
+  <script>  
+    function addProgress();
+    {
+      
+      
+            $('.horizontal .progress-fill span').each(function(){
+        var percent = $(this).html();
+          $(this).parent().css('width', percent);
+      });
+
+
+        $('progressbar').each(function(){
+    var percent = $(this).html();
+    var pTop = 100 - ( percent.slice(0, percent.length - 1) ) + "%";
+    $(this).parent().css({
+        'height' : percent,
+        'top' : pTop
+    });
+  });
+        
+    }
+    </script>  
+
+<!--Function to get Progress bar to work-->
+    
+    
+    
+</head>
+<body class= "DonorUser">
+    
+    
+    
+    
+<div id="container" >
+    <div id= "wrapper" >
+   
+    <ul id="list">
+        
+    
+        <li><button type= "button"class="login1" id = "login" onclick="window.location.href='./indexfood.html'"> Sign Out </button></li>
+    
+
+        
+        
+    </ul>
+    <div >
+     <h1> Mavu Bakery </h1>
+        <h2 class=h> </h2>
+       <p class = "donations" > Charities You've Donated To</p>
+        <li class = "donations" > Shiro and Riley's Orphanage </li>
+        <li class = "donations" > Food Bag Ministries, Inc </li>
+        <li class = "donations" > Power U center </li>
+        <li class = "donations" > Camillus House </li>
+        
+       
+        
+        
+<!--
+ <form class="donorInfo">
+<p> Business: </p>
+<input class="donorInfo" type="text" name="donorname">
+<br>
+<br>
+<p> or </p><br>
+<br>
+<br>
+<p>Name:</p>
+<input class="donorInfo" type="text" name="name">
+<br>
+<br>
+<p> Number: </p>  
+<input class="donorInfo" type="text" name="number">
+<br>
+<br>
+<p>Address: </p>
+<input class="donorInfo" type="text" name="address" >
+<br>
+-->
+    
+
+
+</form>    
+<div class="donateNow">        
+<button  type ="button" class="button" onclick="window.location.href = './Donate Now Page.html'"> Donate Now</button>
+ </div>        
+
+    
+  
+    
+    
+    
+    
+    
+
+<!--
+    
+  <div class="container vertical rounded">
+  <div class="progress-bar">
+    <div class="progress-track">
+      <div class="progress-fill">
+        <span>100%</span>
+      </div>
+    </div>
+  </div>
+
+    
+    
+    
+-->
+    
+    
+   
+    
+    
+    
+    
+<!--
+  <div  class= "progressbar" accesskey=""id="progressbar" style="position: fixed; bottom: 1%; width:70%; text-align: center;">
+  <div></div>
+</div>  
+-->
+    
+</script> 
+
+<style>
+    progress{
+    min-width: 400px;
+    height: 25px;
+    margin: 8px;
+    display: block;
+ 
+    }
+
+.button3 {
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #ddd;
+    padding: 8px 16px;
+    margin: 8px;
+    
+}
+    
+.button3:hover {
+    box-shadow: inset 0 0 10px rgba(0,0,0, 0.1);
+    
+    
+}
+    
+ </style>
+        
+<script type= "text/javascript">
+
+    function goClicked() {
+//        alert("goclicked"); 
+    animateProgress(15);
+    
+}
+//    function backClicked() {
+//        alert("back clicked");
+//    animateProgress(-25);
+//
+
+ function animateProgress(diff) {
+     var currValue = $("progress").val();
+     var toValue = currValue + diff; 
+     
+     toValue = toValue < 0 ? 0 : toValue;
+     toValue = toValue > 100 ? 100: toValue;
+     
+     $("#progress").animate({'value': toValue}, 500); 
+ }
+    
+    
+    
+    
+    
+</script> 
+    
+</head>
+<body> 
+
+    <progress id= "progress" value='0' max= '100'></progress>
+<!--    <label> back </label>-->
+    
+<!--<input type= "button" class= "button2" value= "Back Button" data-diff="-25" onclick= "backClicked()"/>-->
+
+<!--    <label> cont</label>-->
+<input type="button3" value= "I donated" onclick= "goClicked()" class = "button3" data-diff= '15'/>
+    
+    
+    
+    
+    
+    
+    <button type= "button"class="login" id = "login" onclick="window.location.href='./Account info Donor.html'">  Account Info </button>
+
+    
+
+    
+
+    
+
+       
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

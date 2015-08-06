@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Food Waste</title>
+    <link href = "style.css" rel = "stylesheet" style = "text/css"/>
+    <link href='http://fonts.googleapis.com/css?                                           family=Noto+Serif:400,400italic|Titillium+Web' rel='stylesheet' type='text/css'>
+ 
+    
+<!-- Function to get Progress bar to work   -->
+    
+    
+
+  <script> 
+     function addProgress();
+    {
+              $('.horizontal .progress-fill span').each(function(){
+          var percent = $(this).html();
+          $(this).parent().css('width', percent);
+        });
+
+
+        $('progressbar').each(function(){
+          var percent = $(this).html();
+          var pTop = 100 - ( percent.slice(0, percent.length - 1) ) + "%";
+          $(this).parent().css({
+            'height' : percent,
+            'top' : pTop
+          });
+        });
+    }
+    </script>  
+
+    
+ <!-- Function to get Progress bar to work   -->
+    
+    
+    
+</head>
+<body>
+    <div >
+     <h1> Donors </h1>
+        <h2 class=h> Account Info</h2>
+       <p class = "donations" > Charities You've Donated To</p>
+        <li class = "donations" >yada </li>
+        <li class = "donations" >yada </li>
+        <li class = "donations" >blah </li>
+        <li class = "donations" >blah </li>
+        
+       
+        
+        
+ <form class="donorInfo">
+<p> Business: </p>
+<input class="donorInfo" type="text" name="donorname">
+<br>
+<br>
+<p> or </p><br>
+<br>
+<br>
+<p>Name:</p>
+<input class="donorInfo" type="text" name="name">
+<br>
+<br>
+<p> Number: </p>  
+<input class="donorInfo" type="text" name="number">
+<br>
+<br>
+<p>Address: </p>
+<input class="donorInfo" type="text" name="address" >
+<br>
+    
+
+
+</form>    
+<div class="donateNow">        
+<button  type ="button" class="button" onclick="window.location.href = './Donate Now Page.html'"> Donate Now</button>
+ </div>        
+
+    
+  
+    
+    
+    
+    
+    
+
+<!--
+    
+  <div class="container vertical rounded">
+  <div class="progress-bar">
+    <div class="progress-track">
+      <div class="progress-fill">
+        <span>100%</span>
+      </div>
+    </div>
+  </div>
+
+    
+    
+    
+-->
+    
+    
+   
+    
+    
+    
+    
+  <div class= "progressbar" id="progressbar" style="position: fixed; bottom: 1%; width:70%; text-align: center;">
+  <div></div>
+</div>  
+    
+    
+    
+
+    
+    
+    
+    
+    
+</body>
+</html>

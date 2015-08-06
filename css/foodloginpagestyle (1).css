@@ -1,0 +1,74 @@
+body{
+    background-color: pink;
+
+
+}
+
+#donorTable{
+    align-items: center; 
+
+
+}
+
+.charityTable{
+    float:right;    
+
+}
+
+body{
+    text-align:center;
+
+}
+
+#list{
+    width:1650px;
+    height:40px;
+    margin-top: -8px;
+    background-color: black; 
+
+
+}
+
+#list li{
+    display: inline;
+    float: right;
+    padding-right: 115px;
+    color: white;
+    padding-top:10px;
+}
+    
+.button {
+	border: 1px  #be22be;
+    color: deeppink;
+    background-color: black; 
+    font-weight:bold;
+    font-size: 100%;
+}
+
+.button:hover {
+	background: transparent;
+	color: #b822be;
+    font-weight:bold;
+    font-size: 100%;
+}
+
+.login {
+	border: 1px  #be22be;
+    color: deeppink;
+    background-color: black; 
+    font-weight: bold; 
+    font-size: 100%;
+}
+
+.login:hover {
+	background: transparent;
+	color: #b822be;
+    font-weight:bold;
+    font-size: 100%;
+}
+    
+#container {
+  height: 400px;
+  width: 400px;
+  position: relative;
+}

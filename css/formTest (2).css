@@ -1,0 +1,164 @@
+h2{
+    text-align: center;
+    color: white; 
+    
+}
+
+h1{ 
+    text-align: center; 
+    color: white; 
+    font-family: 'Chewy', cursive;
+
+    
+}
+
+
+
+
+.fixed-input-box {
+  width: 200px;
+  font-family: sans-serif;
+  font-size: 15px;
+  padding: 3px;
+  border: 1px solid white;
+}
+#login-wrapper table
+{
+  width: 400px ;
+}
+
+fieldset {
+   border-style:solid;
+   border-color: white;
+   border-width:5px;
+   width:400px;
+   margin: auto;
+}
+
+legend {
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.0em;
+}
+
+#loginButtons table{
+    width: 200px;
+    margin: auto;
+}
+#loginButtons
+{
+    padding-top: 20px;   
+}
+
+#loginButtons .leftButton
+{
+    text-align: left;
+}
+
+#loginButtons .rightButton
+{
+    text-align: right;
+}
+
+
+body{
+    
+    background: url(ows_143568871352500.jpg);
+
+
+}
+
+#submit{
+    border: 1px  #be22be;
+    color: whitesmoke;
+    background-color: #b25fa2; 
+    font-weight: bold; 
+    font-size: 100%;
+
+
+}
+
+#submit:hover{
+    background: transparent;
+	color: #b822be;
+    font-weight:bold;
+    font-size: 100%;
+
+}
+
+#reset{
+    border: 1px  #be22be;
+    color: whitesmoke;
+    background-color: #b25fa2; 
+    font-weight:bold;
+    font-size: 100%;
+
+
+}
+
+#reset:hover{
+    background: transparent;
+	color: #b822be;
+    font-weight:bold;
+    font-size: 100%;
+
+
+
+
+}
+
+#list{
+    width:1650px;
+    height:40px;
+    margin-top: -8px;
+    background-color: black; 
+
+
+}
+
+#list li{
+    display: inline;
+    float: right;
+    padding-right: 75px;
+    color: white;
+    padding-top:10px;
+    
+
+
+
+}
+
+.button {
+	border: 1px  #be22be;
+    color: deeppink;
+    background-color: black; 
+    font-weight:bold;
+    font-size: 100%;
+}
+
+.button:hover {
+	background: transparent;
+	color: #b822be;
+    font-weight:bold;
+    font-size: 100%;
+}
+
+.login1 {
+	border: 1px  #be22be;
+    color: deeppink;
+    background-color: black; 
+    font-weight: bold; 
+    font-size: 100%;
+}
+
+.login1:hover {
+	background: transparent;
+	color: #b822be;
+    font-weight:bold;
+    font-size: 100%;
+}
+
+
+
+

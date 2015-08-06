@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Food Waste</title>
+    <link href = "style.css" rel = "stylesheet" style = "text/css"/>
+    <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic|Titillium+Web' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+    
+    
+    <script type="text/javascript" src="Script%20for%20All.js"></script>
+    
+    
+<!--  <button onclick="addProgress()"></button>  -->
+    <script> Parse.initialize("1AA9MEPQBbQOl5r3zQprN06KY2QUs32Y2n418Sv4", "uvPr6EALlpWKQ0Tij361i4et8AnQi7UqdjZbgRij");
+        
+        
+        
+        
+
+var CharityInformation = Parse.Object.extend("CharityInformation");
+
+var query = new Parse.Query(CharityInformation);
+query.find({
+  success: function(results) {
+    alert("Successfully retrieved " + results.length + " scores.");
+    // Do something with the returned Parse.Object values
+    for (var i = 0; i < results.length; i++) {
+      var object = results[i];
+//      alert(object.id + ' - ' + object.get('Name'));
+        $("#charityList").append(object.get("Charity") + "<br/>");
+        $("#charityList").append(object.get("Name") + "<br/>");
+        $("#charityList").append(object.get("BriefDescription") + "<br/>");
+        $("#charityList").append(object.get("Address") + "<br/>");
+        $("#charityList").append(object.get("Number") + "<br/>" + "<br/>"  + "<br/>" + "<br/>" + "<br/>" + "<br/>");
+         
+    }
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+}); </script>
+    
+
+    
+    
+</head>
+<body class = b>
+    <div class= containerTwo>
+<!--
+       <h1> What Charity would you like to donate to?</h1> 
+        <h1 class= "charities"> Feeding America</h1>
+-->
+     <h2></h2>
+<div>        
+<button  type ="button" class="button" onclick="window.location.href = './Send Thanks to  Donor.html'"> Donate to Us!</button>
+ </div>    
+        
+        <div id="charityList"></div>
+        
+    
+
+    
+    
+
+    
+        
+        
+        </div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Mavu Donor Login</title>
+<link rel="icon" 
+     type="image/png" 
+     href="./css/mangoIcon.jpg">
+<meta charset="utf-8">
+
+<link href="css/formTest.css" rel="stylesheet" style="text/css">
+
+
+
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    
+    <script src="underscore.js"></script>
+   <script src="http://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+    
+
+    
+</head>
+<body>
+    
+    
+<div id="container" >
+<div id= "wrapper" >
+   
+    <ul id="list">
+        
+    
+        <li><button type= "button"class="login1" id = "login1" onclick="window.location.href='./testLoginFormWithParse.html'"> Login for Donors </button></li>
+    
+<li><button type= "button"class="login1" id = "login1" onclick="window.location.href='./testLoginFormWithParse 2.html'"> Login for Charities </button></li>
+        
+        
+        <li><button type= "button"class="button" onclick="window.location.href='./indexFoodWasteMyah.html'"> About</button></li>
+        
+        <li><button type="button"class="button" onclick="window.location.href='./indexfood.html'">Home</button></li>
+        
+        
+        
+    </ul>
+        
+<h1> Donors </h1>
+<h2>Welcome to Mavu </h2>
+<div id="login-wrapper">
+    <fieldset>
+        <legend> Login Form </legend>
+<!-- begin login form -->
+<form name="loginForm"  action="#" method="post">
+    <table>
+        <tr>
+            <td><label for="login">Login:</td> 
+            <td><input class="fixed-input-box" type="text" name="login" id="username"></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password:</label></td> 
+            <td><input type="password" name="password" id="password" class = "fixed-input-box"></td>
+        </tr>
+        <tr>
+            <!--<td><label for="fc">Favorite Color:</label></td> -->
+           <!-- <td><input type="text" name="fc" id="fc" class = "fixed-input-box"></td>-->
+        </tr>
+    </table>
+     <div id="loginButtons"> 
+         <table>
+             <tr>
+                 <td class="leftButton"><input type="button" name="submit" id="submit" value="Sign up" onclick="signUpUser()" /></td>
+
+                <td class="rightButton"><input type="reset" name="reset" id="reset" value="Log in" onclick="logIn()"><br></td>
+                 
+                 <!--<td ><input type="button" name="color" id="color" value="Show favorite color" /></td>-->
+             </tr>
+    </table>
+    </div>
+
+
+    </form>
+        </fieldset>
+    
+</div>
+<!-- end login form -->
+    
+<script type="text/javascript">
+    //alert("inside kayla's javascript");
+  //Parse.initialize("74FItIMzsiiSI3wqdz1nI4fvrsUYtVAlV7gB2I8D", "V9e1RNifsNDbFNbbnAqbccyCLZuGOAx2GJKebebO");
+    Parse.initialize("1AA9MEPQBbQOl5r3zQprN06KY2QUs32Y2n418Sv4", "uvPr6EALlpWKQ0Tij361i4et8AnQi7UqdjZbgRij");
+    //alert("made it past parse initialize");
+    
+
+    
+//    var TestObject = Parse.Object.extend("TestObject");
+//    var testObject = new TestObject();
+//      testObject.save({foo: "bar"}, {
+//      success: function(object) {
+//        $(".success").show();
+//      },
+//      error: function(model, error) {
+//        $(".error").show();
+//      }
+//    });
+
+    //alert("document ready");
+function signUpUser() { //what jd put in instead of document and submit
+
+                //alert("clicked button");
+    //creates new Parse user to be saved to database 
+    var user = new Parse.User();
+    
+    //grabs the information from our form 
+    var username = $("#username").val();
+    var password = $("#password").val();
+    //var favoriteColor = $("#fc").val(); 
+    
+    user.set("username", username.toString());
+    user.set("password", password.toString());
+    //user.set("favoriteColor", favoriteColor.toString()); 
+    //can add extra information to user
+    user.set("website", "with-animations/index.html");
+    //user.set("email", "email@example.com");
+    
+//call signup function to add user to database 
+user.signUp(null, {
+    
+  success: function(user) {
+    // Hooray! Let them use the app now.
+      alert("You have been signed up. Please click the login button."); 
+      //user.login(); //sets Parse.User.currentUser() to be the user variable 
+      
+  },
+  error: function(user, error) {
+    // Show the error message somewhere and let the user try again.
+    alert("Error: " + error.code + " " + error.message);
+  }
+    });//close user signup 
+            } //closes signupser function
+    
+    
+function logIn(){
+    
+    var username = $("#username").val();
+    
+    var password = $("#password").val();
+    
+    //var favoriteColor = $("#fc").val();
+    
+    Parse.User.logIn(username.toString(),  password.toString(), {
+  success: function(user) {
+    // Do stuff after successful login.
+      alert("You are now logged in.");
+      window.location = "./Donor User.html";
+      
+  },
+  error: function(user, error) {
+    // The login failed. Check error to see why.
+      alert("Couldn't log in");
+      alert(error);
+  }
+
+        }); //closes the Parse.user.login function
+}//close login function
+
+   
+ $("#color").click(function (){
+     //alert("clicked show color");
+     //alert(Parse.User.current().get("favoriteColor"));
+ });
+  
+
+
+  </script>
+
+</body>
+</html>
